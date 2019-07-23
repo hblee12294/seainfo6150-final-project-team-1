@@ -1,35 +1,33 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import "./App.css";
+import './App.css'
 
-// nav
-import MainNav from "./MainNav/MainNav";
+// components
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 // pages
-import AboutPage from "./AboutPage/AboutPage";
-import ContactPage from "./ContactPage/ContactPage";
-import CalendarPage from "./CalendarPage/CalendarPage";
-import DegreePage from "./DegreePage/DegreePage";
-import DegreesPage from "./DegreesPage/DegreesPage";
-import EnrollPage from "./EnrollPage/EnrollPage";
-import ErrorPage from "./ErrorPage/ErrorPage";
-import HomePage from "./HomePage/HomePage";
-import SchoolsPage from "./SchoolsPage/SchoolsPage";
+import AboutPage from './AboutPage/AboutPage'
+import ContactPage from './ContactPage/ContactPage'
+import CalendarPage from './CalendarPage/CalendarPage'
+import DegreePage from './DegreePage/DegreePage'
+import DegreesPage from './DegreesPage/DegreesPage'
+import EnrollPage from './EnrollPage/EnrollPage'
+import ErrorPage from './ErrorPage/ErrorPage'
+import HomePage from './HomePage/HomePage'
+import SchoolsPage from './SchoolsPage/SchoolsPage'
 
 // data
-import dates from "./data/calendar.json";
-import schools from "./data/schools.json";
-import degrees from "./data/degrees.json";
+import dates from './data/calendar.json'
+import schools from './data/schools.json'
+import degrees from './data/degrees.json'
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <header>
-          This is a page header that will persist on every page
-          <hr />
-        </header>
+        <Header />
         <main>
           <Switch>
             <Route path="/" exact component={HomePage} />
@@ -80,13 +78,10 @@ function App() {
             <Route component={ErrorPage} />
           </Switch>
         </main>
-        <footer>
-          <hr />
-          This is a page footer that will persist on every page
-        </footer>
+        <Footer />
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
