@@ -22,7 +22,7 @@ const MainNav = () => {
           <Link to="/about">About</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/contact">Directions and Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

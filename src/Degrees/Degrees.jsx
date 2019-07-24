@@ -19,7 +19,6 @@ const Degrees = ({ degrees }) => {
             <div className={styles.degreeInfo}>
               <h4 className={styles.degreeTitle}>{degree.title}</h4>
               <Link to={`/degree/${degree.slug}`}>
-                {/* <Button style={{ color: '#fff', borderColor: '#fff' }}> */}
                 <Button>Detail</Button>
               </Link>
             </div>
