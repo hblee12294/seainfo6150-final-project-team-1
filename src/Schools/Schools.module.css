@@ -1,0 +1,45 @@
+.schools {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 8vw;
+  line-height: 1.6;
+}
+
+.school {
+  /* margin-right: 1rem; */
+  /* background-color: #3498db; */
+}
+
+.schoolName {
+  /* color: #fff; */
+  /* background-color: #5dade2; */
+}
+
+.degreeList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.degreeItem {
+  position: relative;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.degreeItem::before {
+  content: '';
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: 0.2s;
+}
+
+.degreeItem:hover::before {
+  width: 100%;
+}

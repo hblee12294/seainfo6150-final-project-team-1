@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Schools from "../Schools/Schools";
+import Schools from '../Schools/Schools'
 
 const SchoolsPage = ({ degrees, schools }) => {
   return (
     <div>
-      This is the Schools page 
-      <hr />
       <Schools degrees={degrees} schools={schools} />
     </div>
   )
