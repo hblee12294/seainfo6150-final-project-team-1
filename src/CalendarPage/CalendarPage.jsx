@@ -5,7 +5,6 @@ import Calendar from "../Calendar/Calendar";
 const CalendarPage = ({ dates }) => {
   return (
     <div>
-      This is the calendar page
       <Calendar dates={dates} />
     </div>
   )

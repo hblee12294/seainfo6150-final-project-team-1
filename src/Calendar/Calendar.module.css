@@ -1,0 +1,17 @@
+.calendarWrapper {
+  width: 40vw;
+  margin: 3rem auto;
+}
+
+.article {
+  position: relative;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.time {
+  position: absolute;
+  left: -7rem;
+  color: #797979;
+  font-style: normal;
+}

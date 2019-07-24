@@ -1,22 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import styles from './Calendar.module.css'
 
 const Calendar = ({ dates }) => {
   return (
-    <div>
+    <div className={styles.calendarWrapper}>
       {dates.map((date, index) => {
         return (
-          <div key={`${date.date}-${index}`}>
-            Date display information
-          </div>
-        );
+          <article key={`${date.date}-${index}`} className={styles.article}>
+            <address className={styles.time}>
+              <time dateTime={date.date}>{date.date}</time>
+            </address>
+            <p>{date.description}</p>
+          </article>
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
 Calendar.propTypes = {
   dates: PropTypes.array.isRequired
-};
+}
 
-export default Calendar;
+export default Calendar
