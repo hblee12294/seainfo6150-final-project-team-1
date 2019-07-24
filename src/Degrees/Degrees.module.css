@@ -1,0 +1,33 @@
+.degreeList {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  list-style: none;
+}
+
+.degreeItem {
+  position: relative;
+}
+
+.degreeImage {
+  position: relative;
+  width: 100%;
+  filter: grayscale(100%) contrast(50%)	brightness(90%);
+}
+
+.degreeInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.degreeTitle {
+  color: #fff;
+  font-size: 1.5rem;
+}
