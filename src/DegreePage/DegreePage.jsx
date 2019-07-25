@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import styles from './DegreePage.module.css'
+
+import Button from '../Button/Button'
 
 const DegreePage = ({ degree, schools }) => {
   const thisDegreesSchools = schools.filter(school =>
@@ -8,12 +11,12 @@ const DegreePage = ({ degree, schools }) => {
   )
 
   const schoolItems = thisDegreesSchools.map(school => (
-    <li key={school}>{`School of ${school.name}`}</li>
+    <li key={school.name}>{`School of ${school.name}`}</li>
   ))
 
-  const syllabusItems = degree.syllabus_pdf_urls && degree.syllabus_pdf_urls.map(url => (
-    <li key={url}>{url}</li>
-  ))
+  const syllabusItems =
+    degree.syllabus_pdf_urls &&
+    degree.syllabus_pdf_urls.map(url => <li key={url}>{url}</li>)
 
   return (
     <div className={styles.wrapper}>
@@ -32,6 +35,11 @@ const DegreePage = ({ degree, schools }) => {
       <section>
         <h3>Syllabus</h3>
         <ul>{syllabusItems}</ul>
+      </section>
+      <section>
+        <Link to={`/enroll/${degree.slug}`}>
+          <Button style={{ color: '#3498db' }}>Enroll</Button>
+        </Link>
       </section>
     </div>
   )

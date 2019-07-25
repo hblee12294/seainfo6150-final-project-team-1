@@ -1,6 +1,6 @@
 .filterer {
   display: flex;
-  padding: 2rem 0;
+  margin-bottom: 3rem;
   justify-content: space-between;
 }
 
@@ -9,9 +9,32 @@
 }
 
 .selectWrapper {
+  position: relative;
   margin-right: 2rem;
+  min-width: 200px;
+}
+
+.selectWrapper::before {
+  content: '';
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background-color: #909090;
 }
 
 .selectWrapper:last-child {
   margin-right: 0;
+}
+
+.selectWrapper select {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: #797979;
+  font-size: 0.9rem;
+  outline: none;
 }

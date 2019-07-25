@@ -7,8 +7,13 @@ const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
     <div className={styles.filterer}>
       <section className={styles.filters}>
         <div className={styles.selectWrapper}>
-          <select name="level" id="level" onChange={onFilter}>
-            <option value="" disabled selected>
+          <select
+            name="level"
+            id="level"
+            defaultValue="default"
+            onChange={onFilter}
+          >
+            <option value="default" disabled>
               Filter by level
             </option>
             <option value="none">None</option>
@@ -19,8 +24,13 @@ const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
           </select>
         </div>
         <div className={styles.selectWrapper}>
-          <select name="school" id="school" onChange={onFilter}>
-            <option value="" disabled selected>
+          <select
+            name="school"
+            id="school"
+            defaultValue="default"
+            onChange={onFilter}
+          >
+            <option value="default" disabled>
               Filter by school
             </option>
             <option value="none">None</option>
@@ -33,14 +43,16 @@ const DegreesSorterFilterer = ({ onSort, onFilter, schools }) => {
         </div>
       </section>
       <section className={styles.sorter}>
-        <select onChange={onSort}>
-          <option value="" disabled selected>
-            Order
-          </option>
-          <option value="none">None</option>
-          <option value="AZ">A - Z</option>
-          <option value="ZA">Z - A</option>
-        </select>
+        <div className={styles.selectWrapper}>
+          <select onChange={onSort} defaultValue="default">
+            <option value="default" disabled>
+              Sort By
+            </option>
+            <option value="none">None</option>
+            <option value="AZ">A - Z</option>
+            <option value="ZA">Z - A</option>
+          </select>
+        </div>
       </section>
     </div>
   )

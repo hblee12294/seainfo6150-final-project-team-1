@@ -1,28 +1,29 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { withRouter } from "react-router-dom";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
+import styles from './EnrollPage.module.css'
 
-import EnrollConfirmation from "../EnrollConfirmation/EnrollConfirmation";
-import EnrollForm from "../EnrollForm/EnrollForm";
+import EnrollConfirmation from '../EnrollConfirmation/EnrollConfirmation'
+import EnrollForm from '../EnrollForm/EnrollForm'
 
 class EnrollPage extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       form: null
-    };
+    }
   }
 
   onSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
       form: e.target
-    });
-  };
+    })
+  }
 
   render() {
     return (
-      <div>
+      <div className={styles.enrollPage}>
         {this.props.degree.title}
         {this.state.form ? (
           <EnrollConfirmation form={this.state.form} />
@@ -30,11 +31,11 @@ class EnrollPage extends Component {
           <EnrollForm onSubmit={this.onSubmit} />
         )}
       </div>
-    );
+    )
   }
 }
 
 EnrollPage.propTypes = {
   degree: PropTypes.object.isRequired
 }
-export default withRouter(EnrollPage);
+export default withRouter(EnrollPage)
