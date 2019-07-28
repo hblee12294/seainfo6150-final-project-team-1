@@ -1,3 +1,10 @@
+.navWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem;
+}
+
 .navBar {
   margin: 0;
   padding: 0;
@@ -10,10 +17,27 @@
 }
 
 .navItem a {
-  color: #3498DB;
+  position: relative;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   transition: 0.2s;
+}
+
+.navItem a::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: #5dade2;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.navItem a:hover::before {
+  height: 60%;
 }
 
 .navItem:last-of-type {

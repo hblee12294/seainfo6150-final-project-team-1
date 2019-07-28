@@ -4,7 +4,7 @@ import styles from './MainNav.module.css'
 
 const MainNav = () => {
   return (
-    <nav>
+    <nav className={styles.navWrapper}>
       <ul className={styles.navBar}>
         <li className={styles.navItem}>
           <Link to="/">Home</Link>
