@@ -17,6 +17,11 @@
   max-width: 2.5rem;
   height: 100%;
   padding: 0.6rem 0.8rem;
-  color: #fff;
+  color: #101010;
   background-color: #5dade2;
+  transition: 0.2s;
+}
+
+.reverse {
+  color: #fff;
 }

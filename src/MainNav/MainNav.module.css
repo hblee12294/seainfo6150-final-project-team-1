@@ -16,15 +16,19 @@
   list-style: none;
 }
 
-.navItem a {
+.link {
   position: relative;
-  color: #fff;
+  color: #101010;
   font-weight: bold;
   text-decoration: none;
   transition: 0.2s;
 }
 
-.navItem a::before {
+.reverse {
+  color: #ffffff;
+}
+
+.link::before {
   content: '';
   position: absolute;
   bottom: -20%;
@@ -36,7 +40,11 @@
   z-index: -1;
 }
 
-.navItem a:hover::before {
+.link:hover::before {
+  height: 60%;
+}
+
+.active::before {
   height: 60%;
 }
 
