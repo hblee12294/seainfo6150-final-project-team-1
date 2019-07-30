@@ -14,7 +14,6 @@
 .degreeImage {
   position: relative;
   width: 100%;
-  border-radius: 5px;
   filter: grayscale(100%) contrast(50%) brightness(90%);
   user-select: none;
 }

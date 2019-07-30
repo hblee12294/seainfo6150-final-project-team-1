@@ -13,10 +13,6 @@ const HomePage = () => {
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.stat}>
-            <h3 className={styles.statTitle}>Schools</h3>
-            <p className={styles.statNumber}>6</p>
-          </div>
-          <div className={styles.stat}>
             <h3 className={styles.statTitle}>Programs</h3>
             <p className={styles.statNumber}>24</p>
           </div>

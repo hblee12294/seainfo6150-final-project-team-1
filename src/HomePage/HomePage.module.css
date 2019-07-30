@@ -5,6 +5,7 @@
   background-image: url('/images/students1.jpg');
   background-size: cover;
   background-position: center;
+  background-color: #aeaeae;
   filter: brightness(80%);
   overflow: hidden;
 }
@@ -40,7 +41,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding-left: 8vw; 
+  padding-left: 8vw;
 }
 
 .stat {
