@@ -7,6 +7,7 @@ const MainNav = ({ location }) => {
 
   switch (location.pathname) {
     case '/':
+    case '/about':
       linkStyle = `${styles.link} ${styles.reverse}`
       break
     default:
