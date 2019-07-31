@@ -1,0 +1,103 @@
+.wrapper {
+  margin-top: 12rem;
+  padding: 0 4vw;
+}
+
+.content {
+  display: flex;
+  margin: 5rem 0;
+}
+
+.hero {
+  height: 400px;
+}
+
+.head {
+  position: relative;
+  flex: 1;
+  height: 540px;
+  padding: 2rem 2rem;
+  background-color: #5dade2;
+}
+
+.head::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-width: 270px 30px;
+  border-style: solid;
+  border-color: #5dade2 transparent transparent #5dade2;
+  z-index: 1;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.intro {
+  color: #fff;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero {
+  filter: grayscale(100%) contrast(100%) brightness(1) opacity(90%);
+  user-select: none;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  vertical-align: middle;
+}
+
+.section {
+  margin-bottom: 2rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.section:last-of-type {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+
+.sectionTitle {
+  color: #ffffff;
+}
+
+.section ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 2rem;
+}
+
+.section li {
+  list-style-type: none;
+}
+
+.sectionContent {
+  padding-left: 4rem;
+}
+
+.syllabusLink {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.syllabusLink:hover {
+  color: #fff;
+  text-decoration: underline;  
+}

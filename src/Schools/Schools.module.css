@@ -1,0 +1,73 @@
+.schools {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 10rem;
+  padding: 3rem 4vw 3rem;
+  line-height: 1.6;
+}
+
+.school {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.left {
+  width: 35vw;
+  height: 30rem;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #aeaeae;
+}
+
+.right {
+  flex: 1;
+  margin-left: 4vw;
+}
+
+.schoolName {
+  font-size: 1.8rem;
+}
+
+.schoolIntro {
+  margin-bottom: 3rem;
+  padding-left: 0.5rem;
+  border-left: 0.4rem solid #5dade2;
+}
+
+.degreeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.degreeItem {
+  position: relative;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.degreeItem::before {
+  content: '';
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: 0.2s;
+}
+
+.degreeItem:hover::before {
+  width: 100%;
+}

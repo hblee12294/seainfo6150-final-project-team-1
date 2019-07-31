@@ -1,3 +1,10 @@
+.navWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem;
+}
+
 .navBar {
   margin: 0;
   padding: 0;
@@ -9,11 +16,36 @@
   list-style: none;
 }
 
-.navItem a {
-  color: #3498DB;
+.link {
+  position: relative;
+  color: #101010 !important;
   font-weight: bold;
   text-decoration: none;
   transition: 0.2s;
+}
+
+.reverse {
+  color: #ffffff !important; 
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -4px;
+  right: -4px;
+  height: 0;
+  background-color: #5dade2;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.link:hover::before {
+  height: 60%;
+}
+
+.active::before {
+  height: 60%;
 }
 
 .navItem:last-of-type {

@@ -1,32 +1,81 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import styles from './MainNav.module.css'
 
-const MainNav = () => {
+const MainNav = ({ location }) => {
+  let linkStyle
+
+  switch (location.pathname) {
+    case '/':
+    case '/about':
+      linkStyle = `${styles.link} ${styles.reverse}`
+      break
+    default:
+      linkStyle = styles.link
+      break
+  }
+
   return (
-    <nav>
+    <nav className={styles.navWrapper}>
       <ul className={styles.navBar}>
         <li className={styles.navItem}>
-          <Link to="/">Home</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/"
+            exact
+          >
+            Home
+          </NavLink>
         </li>
         <li className={styles.navItem}>
-          <Link to="/schools">Schools</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/schools"
+          >
+            Schools
+          </NavLink>
         </li>
         <li className={styles.navItem}>
-          <Link to="/degrees">Degrees</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/degrees"
+          >
+            Degrees
+          </NavLink>
         </li>
         <li className={styles.navItem}>
-          <Link to="/calendar">Calendar</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/calendar"
+          >
+            Calendar
+          </NavLink>
         </li>
         <li className={styles.navItem}>
-          <Link to="/about">About</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/about"
+          >
+            About
+          </NavLink>
         </li>
         <li className={styles.navItem}>
-          <Link to="/contact">Directions and Contact</Link>
+          <NavLink
+            className={linkStyle}
+            activeClassName={styles.active}
+            to="/contact"
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
   )
 }
 
-export default MainNav
+export default withRouter(MainNav)
