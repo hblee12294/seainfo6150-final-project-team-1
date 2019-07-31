@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <main>
+        <main style={{ overflow: 'hidden' }}>
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route

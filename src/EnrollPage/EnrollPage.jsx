@@ -14,10 +14,11 @@ class EnrollPage extends Component {
     }
   }
 
-  onSubmit = e => {
+  onSubmit = (e, values) => {
     e.preventDefault()
+
     this.setState({
-      form: e.target
+      form: values
     })
   }
 

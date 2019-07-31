@@ -18,14 +18,14 @@
 
 .link {
   position: relative;
-  color: #101010;
+  color: #101010 !important;
   font-weight: bold;
   text-decoration: none;
   transition: 0.2s;
 }
 
 .reverse {
-  color: #ffffff;
+  color: #ffffff !important; 
 }
 
 .link::before {

@@ -39,6 +39,7 @@ const EnrollForm = ({ onSubmit, form }) => {
 
     form.validateFields((err, values) => {
       if (!err) {
+        console.log(values)
         onSubmit(e, values)
       }
     })
@@ -47,12 +48,12 @@ const EnrollForm = ({ onSubmit, form }) => {
   return (
     <Form {...formItemLayout} onSubmit={handleSubmit} className={styles.form}>
       <Form.Item label="Full Name">
-        {getFieldDecorator('fullname', {
+        {getFieldDecorator('Full Name', {
           rules: [{ required: true, message: 'Full Name is required' }]
         })(<Input placeholder="First Name Last Name" />)}
       </Form.Item>
       <Form.Item label="Email">
-        {getFieldDecorator('email', {
+        {getFieldDecorator('Email', {
           rules: [
             {
               type: 'email',
@@ -63,37 +64,37 @@ const EnrollForm = ({ onSubmit, form }) => {
         })(<Input placeholder="foo@bar.com" />)}
       </Form.Item>
       <Form.Item label="Street">
-        {getFieldDecorator('street', {
+        {getFieldDecorator('Street', {
           rules: [{ required: true, message: 'Street is required' }]
         })(<Input placeholder="Street Address" />)}
       </Form.Item>
       <Form.Item label="City">
-        {getFieldDecorator('city', {
+        {getFieldDecorator('City', {
           rules: [{ required: true, message: 'City is required' }]
         })(<Input placeholder="eg: Seattle" />)}
       </Form.Item>
       <Form.Item label="State">
-        {getFieldDecorator('state', {
+        {getFieldDecorator('State', {
           rules: [{ required: true, message: 'State is required' }]
         })(<Input placeholder="eg: WA" />)}
       </Form.Item>
       <Form.Item label="Zipcode">
-        {getFieldDecorator('zipcode', {
+        {getFieldDecorator('Zipcode', {
           rules: [{ required: true, message: 'Zipcode is required' }]
         })(<InputNumber placeholder="eg: 98109" />)}
       </Form.Item>
       <Form.Item label="Phone Number">
-        {getFieldDecorator('phone', {
+        {getFieldDecorator('Phone Number', {
           rules: [{ required: true, message: 'Phone number is required' }]
         })(<Input placeholder="eg: XXX-XXX-XXXX" />)}
       </Form.Item>
       <Form.Item label="Date of Birth">
-        {getFieldDecorator('dateOfBirth', {
+        {getFieldDecorator('Date of Birth', {
           rules: [{ required: true, message: 'Date of birth is required' }]
         })(<Input placeholder="eg: YYYY-MM-DD" />)}
       </Form.Item>
       <Form.Item label="Gender">
-        {getFieldDecorator('gender', {
+        {getFieldDecorator('Gender', {
           rules: [{ required: true, message: 'Gender is required' }]
         })(
           <RadioGroup>
@@ -105,7 +106,7 @@ const EnrollForm = ({ onSubmit, form }) => {
         )}
       </Form.Item>
       <Form.Item label="Preferred Pronouns">
-        {getFieldDecorator('preferredPronouns', {
+        {getFieldDecorator('Preferred Pronouns', {
           rules: [{ required: true, message: 'Preferred pronouns is required' }]
         })(
           <RadioGroup>
@@ -118,7 +119,7 @@ const EnrollForm = ({ onSubmit, form }) => {
         )}
       </Form.Item>
       <Form.Item label="Degree of Interest">
-        {getFieldDecorator('degreeOfInterest', {
+        {getFieldDecorator('Degree of Interest', {
           rules: [{ required: true, message: 'Degree of interest is required' }]
         })(
           <Select
@@ -126,7 +127,9 @@ const EnrollForm = ({ onSubmit, form }) => {
             placeholder="Could choose multiple degrees of interest"
           >
             {degrees.map(degree => (
-              <Option key={degree.slug}>{degree.title}</Option>
+              <Option key={degree.slug} value={degree.title}>
+                {degree.title}
+              </Option>
             ))}
           </Select>
         )}
