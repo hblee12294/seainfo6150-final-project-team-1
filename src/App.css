@@ -1,4 +1,5 @@
 /* You can put global styling here */ /* You can put global styling here */
+@import '~antd/dist/antd.css';
 
 html,
 body {

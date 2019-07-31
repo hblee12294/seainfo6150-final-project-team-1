@@ -24,7 +24,9 @@ class EnrollPage extends Component {
   render() {
     return (
       <div className={styles.enrollPage}>
-        {this.props.degree.title}
+        <h2 className={styles.header}>
+          <span>{`${this.props.degree.title} Program Enrollment`}</span>
+        </h2>
         {this.state.form ? (
           <EnrollConfirmation form={this.state.form} />
         ) : (

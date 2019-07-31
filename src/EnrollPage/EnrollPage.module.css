@@ -1,3 +1,16 @@
 .enrollPage {
-  margin: 3rem 8vw;
+  margin: 13rem 4vw 4rem;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: -1rem;
+  color: #fff;
+}
+
+.header span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #5dade2;
 }

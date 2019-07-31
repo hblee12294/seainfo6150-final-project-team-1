@@ -1,0 +1,30 @@
+.form {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 3rem;
+  border: 1px solid #d9d9d9;
+}
+
+.formItem {
+  margin-bottom: 2rem;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 3px 5px;
+  background-color: transparent;
+  border: 2px solid #5dade2;
+  color: #5dade2;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  line-height: 1.3;
+}
+
+.submitBtn:hover {
+  color: #fff;
+  background-color: #5dade2;
+}
