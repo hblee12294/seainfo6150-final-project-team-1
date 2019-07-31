@@ -1,5 +1,6 @@
 .section {
-  margin: 3rem 8vw;
+  display: flex;
+  margin: 3rem 4vw;
   line-height: 1.6;
 }
 
@@ -24,23 +25,32 @@
 
 .sectionTitle {
   flex: 1;
-  padding: 2rem 6rem;
+  padding: 0 5rem;
 }
 
 .sectionContent {
-  flex: 2;
+  flex: 4;
 }
 
-.secondSection {
-  display: flex;
-  flex-direction: row-reverse;
+.sectionContent p {
+  margin-bottom: 2rem;
 }
 
-.thirdSection {
-  display: flex;
+@media screen and (max-width: 900px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .sectionTitle {
+    padding: 2rem 0;
+  }
 }
 
-.fourthSection {
-  display: flex;
-  flex-direction: row-reverse;
+@media screen and (max-width: 780px) {
+  .intro {
+    position: static;
+    color: #202020;
+    margin: 2rem 4vw;
+    width: auto;
+  }
 }

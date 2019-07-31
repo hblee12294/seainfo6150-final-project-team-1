@@ -12,7 +12,7 @@ const AboutPage = () => {
           uniqueness of our campus culture.
         </p>
       </section>
-      <section className={`${styles.section} ${styles.secondSection}`}>
+      <section className={`${styles.section} ${styles.section}`}>
         <h3 className={styles.sectionTitle}>
           A Transformative Educational Experience
         </h3>
@@ -41,7 +41,7 @@ const AboutPage = () => {
           </p>
         </div>
       </section>
-      <section className={`${styles.section} ${styles.thirdSection}`}>
+      <section className={`${styles.section} ${styles.section}`}>
         <h3 className={styles.sectionTitle}>The “Full-Engagement” Advantage</h3>
         <div className={styles.sectionContent}>
           <p>
@@ -63,7 +63,7 @@ const AboutPage = () => {
           </p>
         </div>
       </section>
-      <section className={`${styles.section} ${styles.fourthSection}`}>
+      <section className={`${styles.section} ${styles.section}`}>
         <h3 className={styles.sectionTitle}>
           A Widely Envied Campus Environment
         </h3>

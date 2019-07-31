@@ -71,3 +71,20 @@
 .degreeItem:hover::before {
   width: 100%;
 }
+
+@media screen and (max-width: 750px) {
+  .school {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .degreeList {
+    grid-template-columns: 1fr;
+  }
+}

@@ -83,3 +83,9 @@
   font-size: 1.5rem;
   color: #202020;
 }
+
+@media screen and (max-width: 640px) {
+  .content {
+    margin: 0;
+  }
+}

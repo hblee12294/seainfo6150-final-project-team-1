@@ -95,9 +95,37 @@
 .syllabusLink {
   color: #fff;
   text-decoration: underline;
+  word-wrap: break-word;
 }
 
 .syllabusLink:hover {
   color: #fff;
-  text-decoration: underline;  
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    flex: 1;
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+
+  .head::after {
+    display: none;
+  }
+
+  .head {
+    height: auto;
+  }
 }

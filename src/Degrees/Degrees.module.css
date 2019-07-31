@@ -32,3 +32,15 @@
   color: #fff;
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .degreeList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .degreeList {
+    grid-template-columns: 1fr;
+  }
+}

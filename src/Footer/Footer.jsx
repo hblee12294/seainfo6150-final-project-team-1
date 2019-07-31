@@ -1,65 +1,41 @@
 import React from 'react'
 import styles from './Footer.module.css'
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   let linkStyle = 'footerNav'
+
   return (
-      <footer className={styles.footer}>
-        <nav className={styles.navWrapper}>
+    <footer className={styles.footer}>
+      <nav className={styles.navWrapper}>
         <ul className={styles.navBar}>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/"
-              exact
-            >
+            <NavLink className={linkStyle} to="/" exact>
               Home
             </NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/schools"
-            >
+            <NavLink className={linkStyle} to="/schools">
               Schools
             </NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/degrees"
-            >
+            <NavLink className={linkStyle} to="/degrees">
               Degrees
             </NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/calendar"
-            >
+            <NavLink className={linkStyle} to="/calendar">
               Calendar
             </NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/about"
-            >
+            <NavLink className={linkStyle} to="/about">
               About
             </NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink
-              className={linkStyle}
-              activeClassName={styles.active}
-              to="/contact"
-            >
+            <NavLink className={linkStyle} to="/contact">
               Contact
             </NavLink>
           </li>

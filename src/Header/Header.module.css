@@ -20,8 +20,15 @@
   color: #101010;
   background-color: #5dade2;
   transition: 0.2s;
+  font-weight: bold;
 }
 
 .reverse {
   color: #fff;
+}
+
+@media screen and (max-width: 430px) {
+  .name {
+    font-size: 1.4rem;
+  }
 }
