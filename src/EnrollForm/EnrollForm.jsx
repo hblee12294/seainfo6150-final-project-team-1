@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './EnrollForm.module.css'
 import degrees from '../data/degrees.json'
 
-import { Form, Input, Button, InputNumber, Select, Checkbox, Radio } from 'antd'
+import { Form, Input, InputNumber, Select, Radio } from 'antd'
 const RadioGroup = Radio.Group
 const { Option } = Select
 
